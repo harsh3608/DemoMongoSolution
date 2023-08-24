@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\a1xgysfe.xed~" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
+    <ProjectReference Include="..\GoByBus.Core\GoByBus.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.API", "GoByBus.API\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Core", "GoByBus.Core\GoByBus.Core.csproj", "{6DF8D29A-FA74-464D-9848-F53154BBDC02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Infrastructure", "GoByBus.Infrastructure\GoByBus.Infrastructure.csproj", "{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Services", "GoByBus.Services\GoByBus.Services.csproj", "{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6DF8D29A-FA74-464D-9848-F53154BBDC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DF8D29A-FA74-464D-9848-F53154BBDC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DF8D29A-FA74-464D-9848-F53154BBDC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

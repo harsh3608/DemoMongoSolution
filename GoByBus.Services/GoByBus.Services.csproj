@@ -10,4 +10,9 @@
     <ProjectReference Include="..\GoByBus.Infrastructure\GoByBus.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="IServices\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

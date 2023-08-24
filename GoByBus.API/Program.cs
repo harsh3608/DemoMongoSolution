@@ -1,9 +1,15 @@
+using GoByBus.API.MappingProfile;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+//AutoMapper as a service
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
+
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -17,6 +23,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
 app.UseAuthorization();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoByBus.Core.Entities
 {
-    internal class LoginEntity
+    public class LoginEntity
     {
     }
 }

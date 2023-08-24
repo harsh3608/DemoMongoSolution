@@ -1,9 +1,11 @@
 using GoByBus.API.MappingProfile;
+using GoByBus.Core.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.Configure<DatabaseSettings>(
+    builder.Configuration.GetSection("GoByBusDatabase"));
 
 //AutoMapper as a service
 builder.Services.AddAutoMapper(typeof(MappingProfiles));

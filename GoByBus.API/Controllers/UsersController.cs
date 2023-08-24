@@ -7,5 +7,7 @@ namespace GoByBus.API.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+        
+
     }
 }

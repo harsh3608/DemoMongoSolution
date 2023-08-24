@@ -7,9 +7,8 @@ namespace GoByBus.Core.Entities
 {
     public class UserEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        [Key]
+        public Guid Id { get; set; }
 
         public string? PersonName { get; set; }
 

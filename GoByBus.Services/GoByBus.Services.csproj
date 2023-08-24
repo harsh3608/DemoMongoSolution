@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoByBus.Infrastructure\GoByBus.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IServices\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\GoByBus.Infrastructure\GoByBus.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

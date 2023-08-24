@@ -10,9 +10,4 @@
     <ProjectReference Include="..\GoByBus.Core\GoByBus.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="IRepositories\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

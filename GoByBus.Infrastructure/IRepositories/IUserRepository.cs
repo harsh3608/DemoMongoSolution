@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoByBus.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace GoByBus.Infrastructure.IRepositories
 {
     public interface IUserRepository
     {
-        Task<>
+        Task<UserEntity> RegisterUser(UserEntity user);
     }
 }

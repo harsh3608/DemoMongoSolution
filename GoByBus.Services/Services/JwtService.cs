@@ -1,15 +1,11 @@
-﻿using GoByBus.Core.Entities;
+﻿using GoByBus.Core.DTO;
 using GoByBus.Core.Models;
 using GoByBus.Services.IServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GoByBus.Services.Services
 {
@@ -23,7 +19,7 @@ namespace GoByBus.Services.Services
         }
 
 
-        public AuthenticationResponse CreateJwtToken(UserEntity user)
+        public AuthenticationResponse CreateJwtToken(UserDto user)
         {
 
             DateTime expiration = DateTime.Now.AddMinutes(Convert.ToDouble(_configuration["Jwt:EXPIRATION_MINUTES"]));

@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using GoByBus.Core.DTO;
+using GoByBus.Core.Entities;
+using System;
 
 namespace GoByBus.API.MappingProfile
 {
@@ -6,7 +9,7 @@ namespace GoByBus.API.MappingProfile
     {
         public MappingProfiles()
         {
-
+            CreateMap<UserEntity, UserDto>().ReverseMap();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +11,9 @@ namespace GoByBus.Core.DTO
 {
     public class UserDto
     {
-        public Guid Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
 
         public string? PersonName { get; set; }
 
@@ -20,8 +24,7 @@ namespace GoByBus.Core.DTO
         [EmailAddress]
         public string? Email { get; set; }
 
-        [Phone]
-        public double Phone { get; set; }
+        public string? Phone { get; set; }
 
         public string? Password { get; set; }
 

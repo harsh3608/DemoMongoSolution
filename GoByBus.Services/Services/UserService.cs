@@ -27,7 +27,7 @@ namespace GoByBus.Services.Services
         {
             UserEntity user = new UserEntity()
             {
-                Id = userRequest.Id,
+                Id = null,
                 PersonName = $"{userRequest.FirstName} {userRequest.LastName}",
                 Gender = userRequest.Gender,
                 DOB = userRequest.DOB,

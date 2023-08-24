@@ -15,9 +15,9 @@ namespace GoByBus.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly JwtService _jwtService;
+        private readonly IJwtService _jwtService;
 
-        public UsersController(IUserService userService, JwtService jwtService)
+        public UsersController(IUserService userService, IJwtService jwtService)
         {
             _userService = userService;
             _jwtService = jwtService;
@@ -42,7 +42,7 @@ namespace GoByBus.API.Controllers
                 return response;
             }
 
-            userAddRequest.Password = EncryptDecryptHelper.Encrypt( userAddRequest.Password);
+            userAddRequest.Password = EncryptDecryptHelper.HashData( userAddRequest.Password);
 
             var addedUser = await _userService.RegisterUser(userAddRequest);
 

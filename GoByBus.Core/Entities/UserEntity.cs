@@ -7,8 +7,9 @@ namespace GoByBus.Core.Entities
 {
     public class UserEntity
     {
-        [Key]
-        public Guid Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
 
         public string? PersonName { get; set; }
 
@@ -19,8 +20,7 @@ namespace GoByBus.Core.Entities
         [EmailAddress]
         public string? Email { get; set; }
 
-        [Phone] 
-        public double Phone { get; set; }
+        public string? Phone { get; set; }
 
         public string? Password { get; set; }
 

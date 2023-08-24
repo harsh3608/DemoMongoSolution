@@ -1,5 +1,7 @@
 using GoByBus.API.MappingProfile;
 using GoByBus.Core.Models;
+using GoByBus.Infrastructure.IRepositories;
+using GoByBus.Infrastructure.Repositories;
 using GoByBus.Services.IServices;
 using GoByBus.Services.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -19,6 +21,10 @@ builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 // Add services to the container.
 builder.Services.AddTransient<IJwtService, JwtService>();
+builder.Services.AddTransient<IUserService, UserService>();
+
+//Repositories
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 
 builder.Services.AddControllers();

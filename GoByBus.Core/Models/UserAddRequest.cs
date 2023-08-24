@@ -9,8 +9,6 @@ namespace GoByBus.Core.Models
 {
     public class UserAddRequest
     {
-        public Guid Id { get; set; }
-
         public string? FirstName { get; set; }
 
         public string? LastName { get; set; }
@@ -22,8 +20,7 @@ namespace GoByBus.Core.Models
         [EmailAddress]
         public string? Email { get; set; }
 
-        [Phone]
-        public double Phone { get; set; }
+        public string? Phone { get; set; }
 
         public string? Password { get; set; }
 

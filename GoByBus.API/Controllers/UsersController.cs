@@ -67,5 +67,60 @@ namespace GoByBus.API.Controllers
             return response;
         }
 
+
+        [HttpPost]
+        [Route("Login")]
+        public async Task<ResponseDto<AuthenticationResponse>> LoginUser(UserLogin loginRequest)
+        {
+            ResponseDto<AuthenticationResponse> response = new ResponseDto<AuthenticationResponse>();
+
+            //Validation
+            if (ModelState.IsValid == false)
+            {
+                string errorMessage = string.Join(" | ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+
+                response.StatusCode = 400;
+                response.IsSuccess = false;
+                response.Response = null;
+                response.Message = errorMessage;
+
+                return response;
+            }
+
+            var user = await _userService.FindUserFromEmail(loginRequest.Email);
+
+            if (user != null)
+            {
+                bool isVerified = EncryptDecryptHelper.VerifyHash(loginRequest.Password, user.Password);
+                
+                if(isVerified) 
+                {
+                    var authenticationResponse = _jwtService.CreateJwtToken(user);
+
+                    response.StatusCode = 200;
+                    response.IsSuccess = true;
+                    response.Response = authenticationResponse;
+                    response.Message = "User logged in successfully";
+                }
+                else
+                {
+                    response.StatusCode = 401;
+                    response.IsSuccess = false;
+                    response.Response = null;
+                    response.Message = "Wrong credentials entered !";
+                }
+            }
+            else
+            {
+                response.StatusCode = 404;
+                response.IsSuccess = false;
+                response.Response = null;
+                response.Message = "user Not Found !";
+            }
+
+
+            return response;
+        }
+
     }
 }

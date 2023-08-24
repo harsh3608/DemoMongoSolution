@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoByBus.Core.Entities
+namespace GoByBus.Core.Models
 {
-    public class LoginEntity
+    public class UserLogin
     {
         [Required]
         [EmailAddress]

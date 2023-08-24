@@ -11,6 +11,8 @@ namespace GoByBus.Infrastructure.IRepositories
     {
         Task<UserEntity> RegisterUser(UserEntity user);
 
-        //Task<UserEntity> FindUserFromEmail();
+        Task<UserEntity> FindUserFromEmail(string mail);
+
+        
     }
 }

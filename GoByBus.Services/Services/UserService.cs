@@ -43,5 +43,17 @@ namespace GoByBus.Services.Services
             _mapper.Map(addedUser, userDto);
             return userDto;
         }
+
+
+        public async Task<UserDto> FindUserFromEmail(string mail)
+        {
+            var user = await _userRepository.FindUserFromEmail(mail);
+
+            var userDto = new UserDto();
+            _mapper.Map(user, userDto);
+            return userDto;
+        }
+
+
     }
 }

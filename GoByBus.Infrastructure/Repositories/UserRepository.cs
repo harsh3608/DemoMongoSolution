@@ -34,6 +34,13 @@ namespace GoByBus.Infrastructure.Repositories
             return user;
         }
 
+        public async Task<UserEntity> FindUserFromEmail(string mail)
+        {
+            var user = await _usersCollection.Find(x => x.Email == mail).FirstOrDefaultAsync();
+
+            return user;
+        }
+
 
 
     }

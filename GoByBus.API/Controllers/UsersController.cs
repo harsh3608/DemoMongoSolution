@@ -44,24 +44,36 @@ namespace GoByBus.API.Controllers
 
             userAddRequest.Password = EncryptDecryptHelper.HashData( userAddRequest.Password);
 
-            var addedUser = await _userService.RegisterUser(userAddRequest);
+            var existingUser = await _userService.FindUserFromEmail(userAddRequest.Email);
 
-            if(addedUser != null) 
+            if(existingUser == null)
             {
-                var authenticationResponse = _jwtService.CreateJwtToken(addedUser);
+                var addedUser = await _userService.RegisterUser(userAddRequest);
 
-                response.StatusCode = 200;
-                response.IsSuccess = true;
-                response.Response = authenticationResponse;
-                response.Message = "User registered and logged in successfully";
+                if (addedUser != null)
+                {
+                    var authenticationResponse = _jwtService.CreateJwtToken(addedUser);
 
+                    response.StatusCode = 200;
+                    response.IsSuccess = true;
+                    response.Response = authenticationResponse;
+                    response.Message = "User registered and logged in successfully";
+
+                }
+                else
+                {
+                    response.StatusCode = 500;
+                    response.IsSuccess = false;
+                    response.Response = null;
+                    response.Message = "Server Error Occurred while registering new user.";
+                }
             }
             else
             {
-                response.StatusCode = 500;
+                response.StatusCode = 409;
                 response.IsSuccess = false;
                 response.Response = null;
-                response.Message = "Server Error Occurred while registering new user.";
+                response.Message = $"An user already exists with '{userAddRequest.Email}' mail address.";
             }
 
             return response;

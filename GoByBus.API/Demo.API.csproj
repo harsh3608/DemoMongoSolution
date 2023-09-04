@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoByBus.Services\GoByBus.Services.csproj" />
+    <ProjectReference Include="..\GoByBus.Services\Demo.Services.csproj" />
   </ItemGroup>
 
 </Project>

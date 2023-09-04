@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.API", "GoByBus.API\GoByBus.API.csproj", "{6D9CCF5A-03C3-40C7-B646-8F7B6F8BD334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.API", "GoByBus.API\Demo.API.csproj", "{6D9CCF5A-03C3-40C7-B646-8F7B6F8BD334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Core", "GoByBus.Core\GoByBus.Core.csproj", "{6DF8D29A-FA74-464D-9848-F53154BBDC02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Core", "GoByBus.Core\Demo.Core.csproj", "{6DF8D29A-FA74-464D-9848-F53154BBDC02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Infrastructure", "GoByBus.Infrastructure\GoByBus.Infrastructure.csproj", "{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Infrastructure", "GoByBus.Infrastructure\Demo.Infrastructure.csproj", "{C6CFE44A-F489-4FE0-9968-0C1EB5F4879F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoByBus.Services", "GoByBus.Services\GoByBus.Services.csproj", "{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Services", "GoByBus.Services\Demo.Services.csproj", "{9CF4FE38-0688-486C-91E7-6A859AFFA9A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

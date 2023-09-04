@@ -1,13 +1,13 @@
-﻿using GoByBus.Core.DTO;
-using GoByBus.Core.Entities;
-using GoByBus.Core.Models;
+﻿using Demo.Core.DTO;
+using Demo.Core.Entities;
+using Demo.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoByBus.Services.IServices
+namespace Demo.Services.IServices
 {
     public interface IUserService
     {

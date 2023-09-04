@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
-using GoByBus.Core.DTO;
-using GoByBus.Core.Entities;
+using Demo.Core.DTO;
+using Demo.Core.Entities;
 using System;
 
-namespace GoByBus.API.MappingProfile
+namespace Demo.API.MappingProfile
 {
     public class MappingProfiles: Profile
     {

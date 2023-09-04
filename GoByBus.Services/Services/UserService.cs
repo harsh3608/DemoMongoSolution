@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using GoByBus.Core.DTO;
-using GoByBus.Core.Entities;
-using GoByBus.Core.Models;
-using GoByBus.Infrastructure.IRepositories;
-using GoByBus.Services.IServices;
+using Demo.Core.DTO;
+using Demo.Core.Entities;
+using Demo.Core.Models;
+using Demo.Infrastructure.IRepositories;
+using Demo.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoByBus.Services.Services
+namespace Demo.Services.Services
 {
     public class UserService: IUserService
     {

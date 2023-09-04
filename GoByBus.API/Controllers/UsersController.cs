@@ -1,13 +1,13 @@
-﻿using GoByBus.API.Helpers;
-using GoByBus.Core.DTO;
-using GoByBus.Core.Models;
-using GoByBus.Services.IServices;
-using GoByBus.Services.Services;
+﻿using Demo.API.Helpers;
+using Demo.Core.DTO;
+using Demo.Core.Models;
+using Demo.Services.IServices;
+using Demo.Services.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GoByBus.API.Controllers
+namespace Demo.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

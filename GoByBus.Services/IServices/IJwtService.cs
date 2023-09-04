@@ -1,9 +1,9 @@
-﻿using GoByBus.Core.DTO;
-using GoByBus.Core.Models;
+﻿using Demo.Core.DTO;
+using Demo.Core.Models;
 using System.Security.Claims;
 
 
-namespace GoByBus.Services.IServices
+namespace Demo.Services.IServices
 {
     public interface IJwtService
     {

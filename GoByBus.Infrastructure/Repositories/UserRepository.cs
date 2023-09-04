@@ -1,6 +1,6 @@
-﻿using GoByBus.Core.Entities;
-using GoByBus.Core.Models;
-using GoByBus.Infrastructure.IRepositories;
+﻿using Demo.Core.Entities;
+using Demo.Core.Models;
+using Demo.Infrastructure.IRepositories;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoByBus.Infrastructure.Repositories
+namespace Demo.Infrastructure.Repositories
 {
     public class UserRepository: IUserRepository
     {

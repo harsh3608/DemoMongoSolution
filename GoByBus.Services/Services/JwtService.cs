@@ -1,13 +1,13 @@
-﻿using GoByBus.Core.DTO;
-using GoByBus.Core.Models;
-using GoByBus.Services.IServices;
+﻿using Demo.Core.DTO;
+using Demo.Core.Models;
+using Demo.Services.IServices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace GoByBus.Services.Services
+namespace Demo.Services.Services
 {
     public class JwtService : IJwtService
     {

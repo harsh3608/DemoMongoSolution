@@ -1,9 +1,9 @@
-using GoByBus.API.MappingProfile;
-using GoByBus.Core.Models;
-using GoByBus.Infrastructure.IRepositories;
-using GoByBus.Infrastructure.Repositories;
-using GoByBus.Services.IServices;
-using GoByBus.Services.Services;
+using Demo.API.MappingProfile;
+using Demo.Core.Models;
+using Demo.Infrastructure.IRepositories;
+using Demo.Infrastructure.Repositories;
+using Demo.Services.IServices;
+using Demo.Services.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -14,7 +14,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<DatabaseSettings>(
-    builder.Configuration.GetSection("GoByBusDatabase"));
+    builder.Configuration.GetSection("DemoDatabase"));
 
 //AutoMapper as a service
 builder.Services.AddAutoMapper(typeof(MappingProfiles));

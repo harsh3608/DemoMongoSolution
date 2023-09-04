@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace GoByBus.Core.DTO
+namespace Demo.Core.DTO
 {
     public class ResponseDto<T>
     {

@@ -3,7 +3,7 @@ using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace GoByBus.Core.Entities
+namespace Demo.Core.Entities
 {
     public class UserEntity
     {

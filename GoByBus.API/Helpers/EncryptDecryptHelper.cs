@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace GoByBus.API.Helpers
+namespace Demo.API.Helpers
 {
     public static class EncryptDecryptHelper
     {

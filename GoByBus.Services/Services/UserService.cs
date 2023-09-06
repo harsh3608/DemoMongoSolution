@@ -35,7 +35,8 @@ namespace Demo.Services.Services
                 Phone = userRequest.Phone,
                 Password = userRequest.Password,
                 CreatedDate = DateTime.Now,
-                UserType = userRequest.UserType,
+                UserType = "user",
+                //UserType = userRequest.UserType,
             };
 
             var addedUser = await _userRepository.RegisterUser(user);
@@ -48,6 +49,8 @@ namespace Demo.Services.Services
         public async Task<UserDto> FindUserFromEmail(string mail)
         {
             var user = await _userRepository.FindUserFromEmail(mail);
+
+            if(user == null) { return null; }
 
             var userDto = new UserDto();
             _mapper.Map(user, userDto);

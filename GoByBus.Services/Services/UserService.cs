@@ -35,8 +35,8 @@ namespace Demo.Services.Services
                 Phone = userRequest.Phone,
                 Password = userRequest.Password,
                 CreatedDate = DateTime.Now,
-                UserType = "user",
-                //UserType = userRequest.UserType,
+                //UserType = "user",
+                UserType = userRequest.UserType,
             };
 
             var addedUser = await _userRepository.RegisterUser(user);
